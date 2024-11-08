@@ -1,6 +1,6 @@
 # ollama-api
 
-Personal ChatGPT (Streamlit Branch) Allow you to run on your browser the Power of ChatGPT with your PERSONAL DATA, Intenrnet Access and Memory using LangChain and Streamlit
+How to launch your own Private ChatGPT with API access using Ollama and Llama3.2 and FastAPI(Python)
 
 Here's the [YouTube Video](https://youtu.be/us1l14STMX4).
 
