@@ -44,10 +44,14 @@ async def stream_generated_text(prompt: str, model: str):
 
 # Helper function for non-streaming response from /api/generate
 async def get_generated_text(prompt: str, model: str):
+    
+
     url = "http://localhost:11434/api/generate"
     async with httpx.AsyncClient(timeout=60.0) as client:
         try:
             response = await client.post(url, json={"model": model, "prompt": prompt})
+            
+      
             response.raise_for_status()
 
             # Combine all responses into a single string
@@ -60,6 +64,9 @@ async def get_generated_text(prompt: str, model: str):
                             combined_response += data["response"]
                     except json.JSONDecodeError:
                         continue  # Skip invalid JSON
+                    
+                    
+                
 
             return {"response": combined_response}
 
